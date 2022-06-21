@@ -1,58 +1,69 @@
 package com.in28minutes.springboot.model;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
-public class Student {
-	private String id;
-	private String name;
-	private String description;
-	private List<Course> courses;
+public class Student{
 
-	public Student(String id, String name, String description,
-			List<Course> courses) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.description = description;
-		this.courses = courses;
+	String registrationNumber;
+    int age;
+	String name;
+	List<Subject> subjects;
+	HashMap<String, Character> subjIdSchedule;
+	
+	public Student(String registrationNumber, String name, int age){
+		this.registrationNumber = registrationNumber;
+        this.name = name;
+		this.age = age;
+		this.subjects = new ArrayList<>();
+		this.subjIdSchedule = new HashMap<>();
 	}
-
-	public String getId() {
-		return id;
+	
+	public String getRegistrationNumber() {
+		return registrationNumber;
 	}
-
-	public void setId(String id) {
-		this.id = id;
+	public void setRegistrationNumber(String registrationNumber) {
+		this.registrationNumber = registrationNumber;
 	}
 
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	public String getDescription() {
-		return description;
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public List<Subject> getSubjects() {
+		return subjects;
 	}
 
-	public List<Course> getCourses() {
-		return courses;
+	public void setSubjects(List<Subject> subjects) {
+		this.subjects = subjects;
 	}
 
-	public void setCourses(List<Course> courses) {
-		this.courses = courses;
+	public HashMap<String, Character> getSubjIdSchedule() {
+		return subjIdSchedule;
 	}
 
-	@Override
-	public String toString() {
-		return String.format(
-				"Student [id=%s, name=%s, description=%s, courses=%s]", id,
-				name, description, courses);
+	public void setSubjIdSchedule(HashMap<String, Character> subjIdSchedule) {
+		this.subjIdSchedule = subjIdSchedule;
 	}
+
+	public void addSubject(Subject subject){
+		this.subjects.add(subject);
+	}
+
+	public void addSchedule(String subjectId, Character sch){
+		this.subjIdSchedule.put(subjectId, sch);
+	}
+	
+	
 }
