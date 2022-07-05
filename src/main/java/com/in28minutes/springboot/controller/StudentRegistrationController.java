@@ -16,9 +16,6 @@ import com.in28minutes.springboot.model.*;
 @RestController
 public class StudentRegistrationController {
 
-	//  @RequestMapping(method = RequestMethod.POST, value="/register/student")
-	//
-	//  @ResponseBody
 	@PostMapping("/register/student")
 	public ResponseEntity<StudentRegistrationReply> registerStudent(@RequestBody Student student) {
 		if (!UserLogin.getInstance().isSomeoneLogged()){

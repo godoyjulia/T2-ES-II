@@ -17,9 +17,6 @@ import com.in28minutes.springboot.model.*;
 @RestController
 public class UserRegistrationController {
 
-	//  @RequestMapping(method = RequestMethod.POST, value="/register/student")
-	//
-	//  @ResponseBody
 	@PostMapping("/register/user")
 	public ResponseEntity<UserRegistrationReply> registerUser(@RequestBody User user) {
 		System.out.println("In registerUser");

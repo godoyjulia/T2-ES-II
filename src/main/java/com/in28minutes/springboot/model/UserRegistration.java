@@ -41,7 +41,6 @@ public class UserRegistration {
 				return "Update successful";
 			}
 		}
-
 		return "Update un-successful";
 	}
 
@@ -55,7 +54,6 @@ public class UserRegistration {
 				return "Delete successful";
 			}
 		}
-
 		return "Delete un-successful";
 	}
 

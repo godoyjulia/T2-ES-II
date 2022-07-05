@@ -1,8 +1,5 @@
 package com.in28minutes.springboot.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class SubjectEnrollment {
     
     String name;

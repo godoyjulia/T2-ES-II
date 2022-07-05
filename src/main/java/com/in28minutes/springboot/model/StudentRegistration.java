@@ -64,10 +64,7 @@ public class StudentRegistration {
 				return studentRecords.get(i);
 			}
 		}
-
 		return null;
-
-
 	}
 
 	public List<Student> getStudentRecords() {

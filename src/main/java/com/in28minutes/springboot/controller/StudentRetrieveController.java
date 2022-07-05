@@ -19,9 +19,6 @@ import com.in28minutes.springboot.model.*;
 @RestController
 public class StudentRetrieveController {
 
-	//	@RequestMapping(method = RequestMethod.GET, value="/student/allstudent")
-	//
-	//	@ResponseBody
 	@GetMapping("/student/allstudent")
 	public ResponseEntity<List<Student>> getAllStudents() {
 		System.out.println("In getAllStudents");   

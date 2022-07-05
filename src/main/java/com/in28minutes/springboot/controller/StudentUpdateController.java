@@ -15,10 +15,6 @@ import com.in28minutes.springboot.model.*;
 @RestController
 public class StudentUpdateController {
 
-//	@RequestMapping(method = RequestMethod.PUT, value="/update/student")
-//
-//
-//	@ResponseBody
 	@PutMapping("/update/student")
 	public ResponseEntity<String> updateStudentRecord(@RequestBody Student stdn) {
 		System.out.println("In updateStudentRecord");   

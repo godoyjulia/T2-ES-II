@@ -17,32 +17,14 @@ import com.in28minutes.springboot.model.*;
 @RestController
 public class UserLoginController {
 
-	//  @RequestMapping(method = RequestMethod.POST, value="/register/student")
-	//
-	//  @ResponseBody
 	@PostMapping("/login/user")
 	public ResponseEntity<UserLoginReply> loginUser(@RequestBody UserLogin userLogin) {
 		System.out.println("In loginUser");
 		String registrationNumber = userLogin.getRegistrationNumber();
 		String password = userLogin.getPassword();
 
-		// System.out.println("RegNumber: "+ registrationNumber);
-		// System.out.println();
-		// System.out.println("password: "+ password);
-		
 		UserLoginReply userlogreply = new UserLoginReply();           
-		//UserLogin.getInstance().add(user);
-		//We are setting the below value just to reply a message back to the caller
-		
-		// UserLogin userLogin = new UserLogin();
-		// String validPassword = userLogin.listaUsuariosLogin.get(registrationNumber);
-
-		// UserLogin.getInstance().add(registrationNumber, password);
-		// UserLogin.getInstance();
 		String validPassword = UserLogin.getInstance().listaUsuariosLogin.get(registrationNumber);
-		// UserLogin.getInstance();
-		// System.out.println("listaUsuariosLogin: "+ UserLogin.listaUsuariosLogin);
-		// System.out.println("correct password: "+ validPassword);
 
 		if (validPassword == null){
 			userlogreply.setLoginStatus("Invalid user");

@@ -1,9 +1,5 @@
 package com.in28minutes.springboot.controller;
 
-//import org.springframework.stereotype.Controller;
-//import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RequestMethod;
-//import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.in28minutes.springboot.model.*;
@@ -16,9 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RestController
 public class StudentDeleteController {
 
-//	@RequestMapping(method = RequestMethod.DELETE, value="/delete/student/{regdNum}")
-//
-//	@ResponseBody
 	@DeleteMapping("/delete/student/{regdNum}")
 	public ResponseEntity<String> deleteStudentRecord(@PathVariable("regdNum") String regdNum) {
 		System.out.println("In deleteStudentRecord");   
